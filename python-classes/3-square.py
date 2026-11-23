@@ -1,6 +1,12 @@
 #!/usr/bin/python3
+"""Module that defines a class Square that can compute its area."""
+
+
 class Square:
+    """A class that defines a square by its size."""
+
     def __init__(self, size=0):
+        """Initialize a new square, raising an error if size is invalid."""
         if type(size) is not int:
             raise TypeError("size must be an integer")
         if size < 0:
@@ -8,4 +14,5 @@ class Square:
         self.__size = size
 
     def area(self):
+        """Return the current area of the square."""
         return self.__size ** 2

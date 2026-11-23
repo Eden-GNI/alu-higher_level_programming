@@ -1,6 +1,12 @@
 #!/usr/bin/python3
+"""Module that defines a class Square with a validated size."""
+
+
 class Square:
+    """A class that defines a square by its size."""
+
     def __init__(self, size=0):
+        """Initialize a new square, raising an error if size is invalid."""
         if type(size) is not int:
             raise TypeError("size must be an integer")
         if size < 0:
